@@ -1,0 +1,67 @@
+CREATE DATABASE database_name;
+
+-----------------------------------------------
+
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    BirthDate DATE
+);
+
+
+-------------------------------------------------
+
+CREATE TABLE Courses (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(100),
+    Credits INT
+);
+
+------------------------------------------------------
+
+INSERT INTO Students (StudentID, FirstName, LastName)
+VALUES 
+(2, 'Jane', 'Smith'),
+(3, 'Ali', 'Khan');
+
+--------------------------------------------------------
+
+UPDATE Students
+SET FirstName = 'Jonathan'
+WHERE StudentID = 1;
+
+
+-------------------------------------------------------------
+
+DELETE FROM Students
+WHERE StudentID = 3;
+
+-------------------------------------------------------------
+
+SELECT * FROM Students
+WHERE LastName = 'Khan';
+
+-------------------------------------------------------------------
+
+SELECT * FROM Students
+WHERE FirstName LIKE 'J%';  -- Names starting with J
+
+---------------------------------------------------------------------
+
+SELECT * FROM Students
+ORDER BY LastName ASC;  -- ASC = ascending
+
+-------------------------------------------------------------------------
+
+SELECT * FROM Students
+ORDER BY StudentID DESC;
+
+-------------------------------------------------------------------------
+
+
+SELECT * FROM Students
+ORDER BY LastName, FirstName;
+
+
+--------------------------------------------------------------------------
